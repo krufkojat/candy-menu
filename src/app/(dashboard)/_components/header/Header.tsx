@@ -1,7 +1,7 @@
 import Link from "next/link";
 import clsx from "clsx";
 import IconButton from "@/components/buttons/IconButton";
-import { Bars3Icon, BellIcon } from "@heroicons/react/16/solid";
+import { Bars3Icon } from "@heroicons/react/16/solid";
 import React from "react";
 import { pacifico } from "@/utils/fonts";
 
@@ -26,15 +26,14 @@ const Header = ({ menuOpen }: HeaderProps) => {
             pacifico.className,
           )}
         >
-          CandyMenu
+          <span className="hidden md:inline">CandyMenu</span>
+          <span className="indline md:hidden">C&apos;Menu</span>
         </Link>
 
         <div className="flex gap-2">
-          <IconButton icon={<BellIcon className="size-4 text-primary-300" />} />
-
           <IconButton
             onClick={openModal}
-            icon={<Bars3Icon className="size-4 text-primary-300" />}
+            icon={<Bars3Icon className="size-4 text-white" />}
           />
         </div>
       </div>
