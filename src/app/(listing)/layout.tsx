@@ -4,6 +4,8 @@ import clsx from "clsx";
 import { pacifico } from "@/utils/fonts";
 import AuthButton from "@/components/buttons/AuthButton";
 import background from "/public/patterns/food.svg";
+import { HeartIcon } from "@heroicons/react/16/solid";
+import IconButton from "@/components/buttons/IconButton";
 
 interface ListingLayoutProps {
   children: React.ReactNode;
@@ -32,6 +34,8 @@ const ListingLayout: React.FC<ListingLayoutProps> = ({ children }) => (
       </Link>
 
       <div className="flex gap-2">
+        <IconButton icon={<HeartIcon className="size-4 text-white" />} />
+
         <AuthButton />
       </div>
     </header>
