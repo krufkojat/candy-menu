@@ -18,7 +18,7 @@ describe("AuthButton Component", () => {
     jest.clearAllMocks();
   });
 
-  it("renders login button when not authenticated", () => {
+  it("should render login button when not authenticated", () => {
     (useAuth as jest.Mock).mockReturnValue({ isAuthenticated: false });
 
     render(<AuthButton />);
@@ -29,7 +29,7 @@ describe("AuthButton Component", () => {
     );
   });
 
-  it("renders menu button and MobileNav when authenticated", () => {
+  it("should render menu button and MobileNav when authenticated", () => {
     (useAuth as jest.Mock).mockReturnValue({ isAuthenticated: true });
 
     const openModal = jest.fn();
